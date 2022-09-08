@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <br>
+    <h3 >
+        <img src='logo.jpeg' alt="logo" id="logo">
+        <a type="button" class="btn btn-success btn-lg" href ="/">Home</a>
+        <a type="button" class="btn btn-success btn-lg" href="/addparcel">Add New Parcel</a>
+        <a type="button" class="btn btn-success btn-lg" href="/listparcel">List Parcel</a>
+        <a type="button" class="btn btn-success btn-lg" href="/deleteparcel">Delete Parcel ID</a>
+        <a type="button" class="btn btn-success btn-lg"href="/deleteparcelname">Delete Parcel by Sender</a>
+        <a type="button" class="btn btn-success btn-lg" href="/listsender">List Parcel By Sender</a>
+        <a type="button" class="btn btn-success btn-lg" href="/listweight">Weight Range</a>
+    </h3>
+        
+</head>
+<body id="home">
+
+    <h1>POMS New Parcel</h1>
+    <form action="/addnewparcel" method="POST">
+        Sender <input type="text" name="sendName"/>
+        <br>
+        Address <input type="text"name= "parAddress"/>
+        <br>
+        Weight <input type="number" name ="parWeight"/>
+        <br>
+        <label for ="parcel">Fragile?</label>
+        <select name="parFragile" id="parFragile">
+            <option value="yes">True</option>
+            <option value="no">False</option>
+        </select>
+        <br>
+        <br>
+        <button type="submit" class="btn btn-info btn-sm">Add New Parcel</button>
+    </form>
+</body>
+</html>

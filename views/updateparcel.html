@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <br>
+    <h3 >
+        <img src='logo.jpeg' alt="logo" id="logo">
+        <a type="button" class="btn btn-success btn-lg" href ="/">Home</a>
+        <a type="button" class="btn btn-success btn-lg" href="/addparcel">Add New Parcel</a>
+        <a type="button" class="btn btn-success btn-lg" href="/listparcel">List Parcel</a>
+        <a type="button" class="btn btn-success btn-lg" href="/deleteparcel">Delete Parcel ID</a>
+        <a type="button" class="btn btn-success btn-lg"href="/deleteparcelname">Delete Parcel by Sender</a>
+        <a type="button" class="btn btn-success btn-lg" href="/listsender">List Parcel By Sender</a>
+        <a type="button" class="btn btn-success btn-lg" href="/listweight">Weight Range</a>
+    </h3>
+        
+</head>
+<body id="home">
+    <h1>Update Parcels</h1>
+    <form action="/updateparcels" method="POST">
+        <table>
+            <tr>
+                <td>Parcel ID </td>
+                <td><input type="text" name="parcelID"/> </td>
+            </tr>
+            <tr>
+                <td>Sender Name</td>
+                <td><input type="text" name="newName"/></td>
+            </tr>
+            <tr>
+                <td>Parcel Address</td>
+                <td><input type="text" name="newAddress"/></td>
+            </tr>
+            <tr> 
+                <td>Parcel Weight</td>
+                <td><input type="number" name="newlWeight"/></td>
+            </tr>
+            <tr>
+                <td>Fragile</td>
+                <td><select name="newfragile" id="parcelfragile">
+                    <option value="yes">True</option>
+                    <option value="no">False</option>
+                </select></td>
+            </tr>
+        </table>
+        <br>
+        <br>
+        <button type="submit" class="btn btn-info btn-sm">Update Parcel</button>
+
+  
+
+    </form>
+
+</body>
+
+</html>

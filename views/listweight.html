@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <br>
+    <h3 >
+        <img src='logo.jpeg' alt="logo" id="logo">
+        <a type="button" class="btn btn-success btn-lg" href ="/">Home</a>
+        <a type="button" class="btn btn-success btn-lg" href="/addparcel">Add New Parcel</a>
+        <a type="button" class="btn btn-success btn-lg" href="/listparcel">List Parcel</a>
+        <a type="button" class="btn btn-success btn-lg" href="/deleteparcel">Delete Parcel ID</a>
+        <a type="button" class="btn btn-success btn-lg"href="/deleteparcelname">Delete Parcel by Sender</a>
+        <a type="button" class="btn btn-success btn-lg" href="/listsender">List Parcel By Sender</a>
+        <a type="button" class="btn btn-success btn-lg" href="/listweight">Weight Range</a>
+    </h3>
+        
+</head>
+<body id="home">
+    
+    <h1>List Parcels By Weight Range</h1>
+    <h4>Please Enter Two Weights: First being the smallest and Second being the largest</h4>
+    <form action="/listweights" method="POST">
+
+        First Weight <input type="number"  name="weightone" /> </br>
+        Second Weight <input type="number"  name="weighttwo" /> </br>
+        <br>
+        <button type="submit" class="btn btn-info btn-sm"value="Submit" /> List Parcels in Range </br>
+    </form>
+</body>
+
+</html>
