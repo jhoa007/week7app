@@ -10,8 +10,8 @@ const mongoose = require('mongoose');
 let app = express();
 
 //Referencing Schemas
-const senders = require ('./models/sender');
-const parcels = require('./models/parcel');
+const senders = require ('./routers/sender');
+const parcels = require('./routers/parcel');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -25,6 +25,9 @@ mongoose.connect('mongodb://localhost:27017/parcels',function(err){
 });
 
 //Configuiring Endpoints
+app.get('/sender',function(req,res){
+    res.json({'name':'Max', 'age':25});
+})
 //Sender REST endpoints 
 app.get('/senders', senders.getAll);
 app.post('/senders', senders.createOne);
